@@ -1,0 +1,22 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    120
+  ],
+  "files.exclude": {
+    "**/.git": true
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnSave": true
+  },
+  "clang-format.style": "file",
+  "clang-format.executable": "/usr/bin/clang-format",
+  "python.autoComplete.extraPaths": [
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ],
+  "python.analysis.extraPaths": [
+    "/opt/ros/noetic/lib/python3/dist-packages"
+  ]
+}

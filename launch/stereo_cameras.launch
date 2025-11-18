@@ -1,0 +1,14 @@
+<launch>
+  <!-- You can change these arguments: roslaunch left_cam_rate:=2 -->
+  <arg name="left_cam_rate" default="1" />
+  <arg name="right_cam_rate" default="1" />
+
+  <!-- Left camera -->
+  <node pkg="ros_sync_buf_lab" type="fake_camera_pub.py" name="left_camera_pub" output="screen"
+        args="--frame left --rate $(arg left_cam_rate)" />
+
+  <!-- Right camera -->
+  <node pkg="ros_sync_buf_lab" type="fake_camera_pub.py" name="right_camera_pub" output="screen"
+        args="--frame right --rate $(arg right_cam_rate)" />
+
+</launch>

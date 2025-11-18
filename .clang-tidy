@@ -1,0 +1,16 @@
+Checks: >
+  -*,
+  clang-analyzer-*,
+  bugprone-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  readability-*,
+  misc-unused-parameters,
+  misc-redundant-expression,
+  misc-no-recursion,
+  -readability-function-cognitive-complexity
+
+HeaderFilterRegex: ''
+WarningsAsErrors: ''
+FormatStyle: file

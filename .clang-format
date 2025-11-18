@@ -1,0 +1,22 @@
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++17
+IndentWidth: 2
+ColumnLimit: 120
+AccessModifierOffset: -2
+AlignAfterOpenBracket: AlwaysBreak
+AllowShortFunctionsOnASingleLine: None
+BraceWrapping:
+  AfterClass: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+BreakBeforeBraces: Custom
+ContinuationIndentWidth: 2
+ConstructorInitializerIndentWidth: 0
+PointerAlignment: Left
+DerivePointerAlignment: false
+ReflowComments: true
+SpacesBeforeTrailingComments: 2
+SortIncludes: true
+IncludeBlocks: Preserve

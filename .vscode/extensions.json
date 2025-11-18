@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+      "ms-iot.vscode-ros",
+      "ms-vscode.cpptools",
+      "ms-vscode.cmake-tools",
+      "xaver.clang-format",
+      "eamodio.gitlens",
+      "ms-python.python",
+      "editorconfig.editorconfig",
+      "ms-vscode-remote.vscode-remote-extensionpack"
+    ]
+  }
