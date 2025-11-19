@@ -30,7 +30,7 @@ rosrun ros_sync_buf_lab fake_camera_pub.py --frame basler --rate 1
 You should see:
 
 - A new topic appearing in ROS.
-- Images containing a **large digit** (frame counter).
+- Images containing a **number** (frame counter).
 - One frame per second.
 
 ---
