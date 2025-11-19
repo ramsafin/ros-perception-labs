@@ -7,26 +7,6 @@ This lab introduces two key concepts in ROS perception pipelines:
 
 The lab consists of **two parts**. Complete them in order.
 
-# Lab 1: Fake Camera Publisher
-
-## 1. Getting Started
-
-### Task 1.1 — Run the Fake Camera Publisher
-
-Start ROS master:
-```shell
-roscore
-```
-
-In a new terminal:# Time Synchronization and Buffering Lab (ROS 1, Python)
-
-This lab introduces two key concepts in ROS perception pipelines:
-
-1. **Fake Camera Publisher** — generating synthetic image streams and inspecting ROS topics.
-2. **Time Synchronization** — synchronizing messages from multiple sensors using `message_filters`.
-
-The lab consists of **two parts**. Complete them in order.
-
 ---
 
 # 📘 Lab 1 — Fake Camera Publisher
