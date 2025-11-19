@@ -2,18 +2,18 @@
 
 This lab introduces two key concepts in ROS perception pipelines:
 
-1. **Fake Camera Publisher** — generating synthetic image streams and inspecting ROS topics.
-2. **Time Synchronization** — synchronizing messages from multiple sensors using `message_filters`.
+1. **Fake Camera Publisher** – generating synthetic image streams and inspecting ROS topics.
+2. **Time Synchronization** – synchronizing messages from multiple sensors using `message_filters`.
 
 The lab consists of **two parts**. Complete them in order.
 
 ---
 
-# 📘 Lab 1 — Fake Camera Publisher
+# 📘 Lab 1 – Fake Camera Publisher
 
 ## 1. Getting Started
 
-### Task 1.1 — Run the Fake Camera Publisher
+### Task 1.1 – Run the Fake Camera Publisher
 
 Start ROS master:
 
@@ -37,7 +37,7 @@ You should see:
 
 ## 2. Inspecting ROS Topics
 
-### Task 1.2 — Explore the Published Topic
+### Task 1.2 – Explore the Published Topic
 
 List active topics:
 
@@ -81,7 +81,7 @@ rostopic echo /basler/image_raw/header
 
 ## 3. Visualizing Images
 
-### Task 2.1 — View the Fake Camera Output
+### Task 2.1 – View the Fake Camera Output
 
 Run:
 
@@ -98,7 +98,7 @@ Select `/basler/image_raw`.
 
 ## 4. Experiment with Publishing Rate
 
-### Task 3.1 — Try Higher Rates
+### Task 3.1 – Try Higher Rates
 
 Restart the publisher with different rates:
 
@@ -120,7 +120,7 @@ Observe:
 
 ## 5. Running Two Cameras
 
-### Task 4.1 — Start Two Camera Streams
+### Task 4.1 – Start Two Camera Streams
 
 Terminal 1:
 
@@ -148,7 +148,7 @@ Visualize both in `rqt_image_view`.
 
 ---
 
-# 📘 Lab 2 — Time Synchronization
+# 📘 Lab 2 – Time Synchronization
 
 ## 1. Background Concepts
 
@@ -227,7 +227,7 @@ Create `launch/stereo_sync.launch`:
 
 ## 4. Time Sync Tasks
 
-### Task 4.1 — Run Stereo Sync
+### Task 4.1 – Run Stereo Sync
 
 ```bash
 roslaunch ros_sync_buf_lab stereo_sync.launch
@@ -251,7 +251,7 @@ roslaunch ros_sync_buf_lab stereo_sync.launch left_cam_rate:=1 right_cam_rate:=5
 
 ---
 
-### Task 4.2 — Exact vs Approximate Sync
+### Task 4.2 – Exact vs Approximate Sync
 
 Disable approximate sync:
 
@@ -271,7 +271,7 @@ Re-enable approximate sync afterwards.
 
 ---
 
-### Task 4.3 — Experiment with `slop`
+### Task 4.3 – Experiment with `slop`
 
 Change:
 
@@ -291,7 +291,7 @@ Observe:
 
 ---
 
-### Task 4.4 — Experiment with Queue Size
+### Task 4.4 – Experiment with Queue Size
 
 Modify:
 
@@ -309,7 +309,7 @@ Questions:
 
 ---
 
-### Task 4.5 — Sync With Different Rates
+### Task 4.5 – Sync With Different Rates
 
 Try:
 
@@ -325,7 +325,7 @@ roslaunch ros_sync_buf_lab stereo_sync.launch left_cam_rate:=<M> right_cam_rate:
 
 ---
 
-### Task 4.6 — Side-by-Side Visualization
+### Task 4.6 – Side-by-Side Visualization
 
 Modify `stereo_sync_sub.py`:
 
