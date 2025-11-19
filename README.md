@@ -7,6 +7,19 @@ This lab introduces two key concepts in ROS perception pipelines:
 
 The lab consists of **two parts**. Complete them in order.
 
+Clone this repo into Catkin workspace, e.g. in `~/catkin_ws/src`:
+```shell
+cd ~/catkin_ws/src
+git clone https://github.com/ramsafin/ros-perception-labs ros_sync_buf_lab
+cd ~/catkin_ws
+```
+
+Build the package and source the `devel/setup.bash`:
+```shell
+catkin_make && source devel/setup.bash
+# or catkin build
+```
+
 ---
 
 # 📘 Lab 1 – Fake Camera Publisher
