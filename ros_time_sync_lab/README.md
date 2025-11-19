@@ -10,7 +10,7 @@ The lab consists of **two parts**. Complete them in order.
 Clone this repo into Catkin workspace, e.g. in `~/catkin_ws/src`:
 ```shell
 cd ~/catkin_ws/src
-git clone https://github.com/ramsafin/ros-perception-labs ros_sync_buf_lab
+git clone https://github.com/ramsafin/ros-perception-labs ros_perception_lab
 cd ~/catkin_ws
 ```
 
@@ -37,7 +37,7 @@ roscore
 In a new terminal:
 
 ```bash
-rosrun ros_sync_buf_lab fake_camera_pub.py --frame basler --rate 1
+rosrun ros_time_sync_lab fake_camera_pub.py --frame basler --rate 1
 ```
 
 You should see:
@@ -116,7 +116,7 @@ Select `/basler/image_raw`.
 Restart the publisher with different rates:
 
 ```bash
-rosrun ros_sync_buf_lab fake_camera_pub.py --frame basler --rate <N>
+rosrun ros_time_sync_lab fake_camera_pub.py --frame basler --rate <N>
 ```
 
 Try: **10, 50, 100, 500 Hz**
@@ -138,13 +138,13 @@ Observe:
 Terminal 1:
 
 ```bash
-rosrun ros_sync_buf_lab fake_camera_pub.py --frame left --rate 1
+rosrun ros_time_sync_lab fake_camera_pub.py --frame left --rate 1
 ```
 
 Terminal 2:
 
 ```bash
-rosrun ros_sync_buf_lab fake_camera_pub.py --frame right --rate 2
+rosrun ros_time_sync_lab fake_camera_pub.py --frame right --rate 2
 ```
 
 Check:
@@ -199,13 +199,13 @@ Number of buffered messages per topic:
 Use the provided launch file:
 
 ```bash
-roslaunch ros_sync_buf_lab stereo_cameras.launch
+roslaunch ros_time_sync_lab stereo_cameras.launch
 ```
 
 Override camera rates:
 
 ```bash
-roslaunch ros_sync_buf_lab stereo_cameras.launch left_cam_rate:=1 right_cam_rate:=10
+roslaunch ros_time_sync_lab stereo_cameras.launch left_cam_rate:=1 right_cam_rate:=10
 ```
 
 Stop with `Ctrl+C`.
@@ -221,12 +221,12 @@ Create `launch/stereo_sync.launch`:
   <arg name="left_cam_rate"  default="1"/>
   <arg name="right_cam_rate" default="1"/>
 
-  <include file="$(find ros_sync_buf_lab)/launch/stereo_cameras.launch">
+  <include file="$(find ros_time_sync_lab)/launch/stereo_cameras.launch">
     <arg name="left_cam_rate"  value="$(arg left_cam_rate)"  />
     <arg name="right_cam_rate" value="$(arg right_cam_rate)" />
   </include>
 
-  <node pkg="ros_sync_buf_lab" type="stereo_sync_sub.py" name="stereo_sync_sub" output="screen">
+  <node pkg="ros_time_sync_lab" type="stereo_sync_sub.py" name="stereo_sync_sub" output="screen">
     <param name="left_topic"  value="/left/image_raw"/>
     <param name="right_topic" value="/right/image_raw"/>
     <param name="queue_size"  value="10"/>
@@ -243,7 +243,7 @@ Create `launch/stereo_sync.launch`:
 ### Task 4.1 – Run Stereo Sync
 
 ```bash
-roslaunch ros_sync_buf_lab stereo_sync.launch
+roslaunch ros_time_sync_lab stereo_sync.launch
 ```
 
 You should see entries like:
@@ -257,7 +257,7 @@ You should see entries like:
 Try increasing the right camera rate:
 
 ```bash
-roslaunch ros_sync_buf_lab stereo_sync.launch left_cam_rate:=1 right_cam_rate:=5
+roslaunch ros_time_sync_lab stereo_sync.launch left_cam_rate:=1 right_cam_rate:=5
 ```
 
 > Does synchronization improve?
@@ -275,7 +275,7 @@ Disable approximate sync:
 Run again:
 
 ```bash
-roslaunch ros_sync_buf_lab stereo_sync.launch
+roslaunch ros_time_sync_lab stereo_sync.launch
 ```
 
 > Are there any matches? Why or why not?
@@ -331,7 +331,7 @@ Try:
 - (50, 10)
 
 ```bash
-roslaunch ros_sync_buf_lab stereo_sync.launch left_cam_rate:=<M> right_cam_rate:=<N>
+roslaunch ros_time_sync_lab stereo_sync.launch left_cam_rate:=<M> right_cam_rate:=<N>
 ```
 
 > How often does synchronization occur?

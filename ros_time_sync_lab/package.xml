@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ros_sync_buf_lab</name>
+  <name>ros_time_sync_lab</name>
   <version>1.0.0</version>
-  <description>ROS topics syncing and buffering lab</description>
+  <description>ROS topics synchronization lab</description>
 
   <maintainer email="safin.ramil@it.kfu.ru">Ramil Safin</maintainer>
 
